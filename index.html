@@ -1,1 +1,56 @@
-<title>Questionnaire</title>
+<head>
+    <title> Questionnaire </title> 
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="header"> Parva's Questionnaire </div>
+    <form action="submit.html" name="form" method="POST">
+
+        <div class="question"> What is your name? <br>
+            <input type="text" name="name">
+        </div>
+
+        <div class="question"> Are you enjoying SEG3125? <br>
+            <input type="radio" id="yes" value="yes" name="enjoyment">
+            <label for="yes">Yes</label><br>
+            <input type="radio" id="no" value="no" name="enjoyment">
+            <label for="no">No</label><br>
+            <input type="radio" id="not taking" value="not taking" name="enjoyment">
+            <label for="not taking">I am not taking SEG3125</label><br>
+        </div>
+
+        <div class="question"> How old are you? <br>
+            <select name="age" id="age">
+                <option value="child">0-12</option>
+                <option value="teen">13-17</option>
+                <option value="adult">18-60</option>
+                <option value="retired">60+</option>
+                </select>
+        </div>
+
+        <div class="question"> What are your interests? <br>
+            <input type="checkbox" id="interest1" name="interest1" value="reading">
+            <label for="interest1"> Reading </label><br>
+
+            <input type="checkbox" id="interest2" name="interest2" value="programming">
+            <label for="interest2"> Programming </label><br>
+
+            <input type="checkbox" id="interest3" name="interest3" value="movies">
+            <label for="interest3"> Movies </label><br>
+
+            <input type="checkbox" id="interest4" name="interest4" value="tv">
+            <label for="interest4"> TV Shows </label><br>
+
+            <input type="checkbox" id="interest5" name="interest5" value="video games">
+            <label for="interest5"> Video Games </label><br>
+        </div>
+
+        <div class="question"> Comments: <br>
+            <textarea id="comments" name="comments"rows="10" cols="70"></textarea>
+        </div>
+
+        <div class="question">
+            <input type="submit" value="Submit">
+        </div>
+    </form>
+</body>
