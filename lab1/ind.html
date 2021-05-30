@@ -1,0 +1,59 @@
+<head>
+    <title> Parva's Questionnaire </title> 
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="header"> 
+        <a href="https://parvap.github.io/"><img src="imgs/Glider.jpg" style="float:left;width:80px;height:80px;"></a>
+        <div class="header_title">Parva's Questionnaire </div>
+    </div>
+    <form action="submit.html" name="form">
+
+        <div class="question"> "The calculated total amount due is wrong" <br> What is this an example of? <br>
+            <input type="text" name="name">
+        </div>
+
+        <div class="question"> What is a goal of a UI? <br>
+            <input type="radio" id="func" value="func" name="goal">
+            <label for="func">Proper Functionality</label><br>
+            <input type="radio" id="db" value="db" name="goal">
+            <label for="db">Database Management</label><br>
+            <input type="radio" id="sort" value="sort" name="goal">
+            <label for="sort">Sorting Algorithms</label><br>
+        </div>
+
+        <div class="question"> What is an example of an evaluation method of a UI? <br>
+            <select name="eval" id="eval">
+                <option value="trail">Trailing</option>
+                <option value="calc">Log Analysis</option>
+                <option value="user">User Crafting</option>
+                <option value="mine">Information Mining</option>
+                </select>
+        </div>
+
+        <div class="question"> Select all that are an example of Consistency in a UI <br>
+            <input type="checkbox" id="sin1" name="sin1" value="info">
+            <label for="sin1"> Everytime I click on an item I see more information about it </label><br>
+
+            <input type="checkbox" id="sin2" name="sin2" value="check">
+            <label for="sin2"> All modules have a checklist of work to do </label><br>
+
+            <input type="checkbox" id="sin3" name="sin3" value="rubric">
+            <label for="sin3"> The first homework does not have a rubric </label><br>
+        </div>
+
+        <div class="question"> Comments: <br>
+            <textarea id="comments" name="comments"rows="10" cols="70"></textarea>
+        </div>
+
+        <div class="question">
+            <button onclick="window.location.href='submit.html'">Submit</button>
+        </div>
+    </form>
+
+    <footer>
+        Website designed by:<br>
+        Parva Pathak<br>
+        <a href="ppath014@uottawa.ca">ppath014@uottawa.ca</a>
+    </footer>
+</body>
