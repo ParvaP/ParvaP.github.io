@@ -32,6 +32,7 @@ function populateListProductChoices() {
 	var c2 = document.getElementById('cb2');
 	var c3 = document.getElementById('cb3');
 	var c4 = document.getElementById('cb4');
+	var c5 = document.getElementById('cb5');
     var s2 = document.getElementById('displayProduct');
 	
 	
@@ -39,7 +40,7 @@ function populateListProductChoices() {
     s2.innerHTML = "";
 		
 	// obtain a reduced list of products based on restrictions
-    var optionArray = restrictListProducts(products,c1.checked,c2.checked,c3.checked,c4.checked);
+    var optionArray = restrictListProducts(products,c1.checked,c2.checked,c3.checked,c4.checked,c5.checked);
 
 	// for each item in the array, create a checkbox element, each containing information such as:
 	// <input type="checkbox" name="product" value="Bread">

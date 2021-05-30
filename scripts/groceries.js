@@ -9,7 +9,8 @@ var products = [
 		glutenFree: true,
 		price: 1.99,
 		nutFree: true,
-		lactoseFree: true
+		lactoseFree: true,
+		organic: false
 	},
 	{
 		name: "bread",
@@ -17,7 +18,8 @@ var products = [
 		glutenFree: false,
 		price: 2.35,
 		nutFree: true,
-		lactoseFree: true
+		lactoseFree: true,
+		organic: false
 	},
 	{
 		name: "salmon",
@@ -25,7 +27,8 @@ var products = [
 		glutenFree: true,
 		price: 10.00,
 		nutFree: true,
-		lactoseFree: true
+		lactoseFree: true,
+		organic: false
 	},
 	{
 		name: "granola bars",
@@ -33,7 +36,8 @@ var products = [
 		glutenFree: false,
 		price: 3.00,
 		nutFree: false,
-		lactoseFree: true
+		lactoseFree: true,
+		organic: false
 	},
 	{
 		name: "chicken",
@@ -41,7 +45,8 @@ var products = [
 		glutenFree: true,
 		price: 12.50,
 		nutFree: true,
-		lactoseFree: true
+		lactoseFree: true,
+		organic: false
 	},
 	{
 		name: "milk",
@@ -49,7 +54,8 @@ var products = [
 		glutenFree: true,
 		price: 4.99,
 		nutFree: true,
-		lactoseFree: false
+		lactoseFree: false,
+		organic: true
 	},
 	{
 		name: "bagels",
@@ -57,7 +63,8 @@ var products = [
 		glutenFree: false,
 		price: 3.99,
 		nutFree: true,
-		lactoseFree: true
+		lactoseFree: true,
+		organic: false
 	},
 	{
 		name: "penuts",
@@ -65,7 +72,8 @@ var products = [
 		glutenFree: true,
 		price: 4.99,
 		nutFree: false,
-		lactoseFree: true
+		lactoseFree: true,
+		organic: false
 	},
 	{
 		name: "letuce",
@@ -73,7 +81,8 @@ var products = [
 		glutenFree: true,
 		price: 1.99,
 		nutFree: true,
-		lactoseFree: true
+		lactoseFree: true,
+		organic: true
 	},
 	{
 		name: "kale",
@@ -81,7 +90,8 @@ var products = [
 		glutenFree: true,
 		price: 3.50,
 		nutFree: true,
-		lactoseFree: true
+		lactoseFree: true,
+		organic: true
 	}
 ];
 	
@@ -90,9 +100,9 @@ var products = [
 // given restrictions provided, make a reduced list of products
 // prices should be included in this list, as well as a sort based on price
 
-function restrictListProducts(prods,c1,c2,c3,c4) {
+function restrictListProducts(prods,c1,c2,c3,c4,c5) {
 	let product_list = [];
-	var res = [c1,c2,c3,c4];
+	var res = [c1,c2,c3,c4,c5];
 	console.log(res)
 	for (let i=0; i<prods.length; i+=1) {
 		let flag = false
@@ -106,6 +116,9 @@ function restrictListProducts(prods,c1,c2,c3,c4) {
 			flag = true
 		} 
 		if ((res[3]) && (!prods[i].lactoseFree)){
+			flag = true
+		} 
+		if ((res[4]) && (!prods[i].organic)){
 			flag = true
 		} 
 		if (!flag){
